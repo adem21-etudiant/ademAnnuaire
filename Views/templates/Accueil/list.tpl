@@ -48,7 +48,7 @@
                     <article class="card card-custom h-100 p-3">
                         <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
                             <h3 class="h5 mb-0">{$site.titre|escape}</h3>
-                            <span class="badge badge-status">{$site.categorie|escape}</span>
+                            <span class="badge badge-status">{$site.category_name|default:'Sans catégorie'|escape}</span>
                         </div>
                         <p class="text-muted site-link small mb-2">{$site.url|escape}</p>
                         <p class="mb-3">{$site.description|truncate:120|escape}</p>

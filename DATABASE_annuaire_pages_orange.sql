@@ -27,7 +27,7 @@ CREATE TABLE `category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `libelle` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,12 +38,8 @@ LOCK TABLES `category` WRITE;
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
 set autocommit=0;
 INSERT INTO `category` VALUES
-(1,'Informatique'),
-(2,'Actualités'),
-(3,'Jeux vidéo'),
-(4,'Éducation'),
-(5,'Multimédia'),
-(6,'Développement web');
+(1,'Manga'),
+(2,'Foot');
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 UNLOCK TABLES;
 commit;
@@ -69,7 +65,7 @@ CREATE TABLE `sites` (
   KEY `fk_sites_user` (`user_id`),
   CONSTRAINT `fk_sites_category` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE CASCADE,
   CONSTRAINT `fk_sites_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -80,10 +76,10 @@ LOCK TABLES `sites` WRITE;
 /*!40000 ALTER TABLE `sites` DISABLE KEYS */;
 set autocommit=0;
 INSERT INTO `sites` VALUES
-(5,'Manga Plus','https://mangaplus.shueisha.co.jp/','Lire des mangas gratuitement',6,2,'approved','2026-04-28 10:59:23'),
-(6,'Crunchyroll','https://www.crunchyroll.com/','Anime et mangas en streaming',5,2,'approved','2026-04-28 10:59:23'),
-(7,'L’Équipe','https://www.lequipe.fr/','Actualité football',2,2,'approved','2026-04-28 10:59:23'),
-(8,'Transfermarkt','https://www.transfermarkt.fr/','Stats et mercato football',3,2,'approved','2026-04-28 10:59:23');
+(1,'Manga Plus','https://mangaplus.shueisha.co.jp/','Plateforme officielle pour lire des mangas en ligne.',1,2,'approved','2026-04-28 13:19:06'),
+(2,'Crunchyroll','https://www.crunchyroll.com/','Plateforme de streaming spécialisée dans les animés.',1,2,'approved','2026-04-28 13:19:06'),
+(3,'L’Équipe','https://www.lequipe.fr/Football/','Site d’actualité sportive avec une grande partie dédiée au football.',2,2,'approved','2026-04-28 13:19:06'),
+(4,'Transfermarkt','https://www.transfermarkt.fr/','Site de statistiques, mercato et valeurs des joueurs de football.',2,2,'approved','2026-04-28 13:19:06');
 /*!40000 ALTER TABLE `sites` ENABLE KEYS */;
 UNLOCK TABLES;
 commit;
@@ -129,4 +125,4 @@ commit;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2026-04-28 12:28:38
+-- Dump completed on 2026-04-28 13:19:58

@@ -141,4 +141,21 @@ class SiteModel extends Model
 
         return $sth->fetchAll();
     }
+
+    // 🔥 MÉTHODE AJOUTÉE (NE PAS SUPPRIMER)
+    public function getLatestApproved($limit = 6)
+    {
+        $sql = "SELECT sites.*, category.libelle AS category_name
+                FROM sites
+                INNER JOIN category ON sites.category_id = category.id
+                WHERE sites.status = 'approved'
+                ORDER BY sites.created_at DESC
+                LIMIT :limit";
+
+        $sth = $this->_pdo->prepare($sql);
+        $sth->bindValue(':limit', (int)$limit, PDO::PARAM_INT);
+        $sth->execute();
+
+        return $sth->fetchAll();
+    }
 }

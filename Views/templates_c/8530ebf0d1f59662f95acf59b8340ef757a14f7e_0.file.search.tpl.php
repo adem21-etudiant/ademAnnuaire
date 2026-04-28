@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2026-04-28 19:59:34
+/* Smarty version 4.1.0, created on 2026-04-28 22:01:20
   from 'C:\Users\ademr\OneDrive\Documents\annuaire_tp_final\Views\templates\Site\search.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_69f0f586b0f9c9_82582949',
+  'unifunc' => 'content_69f1121032aa70_16520823',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8530ebf0d1f59662f95acf59b8340ef757a14f7e' => 
     array (
       0 => 'C:\\Users\\ademr\\OneDrive\\Documents\\annuaire_tp_final\\Views\\templates\\Site\\search.tpl',
-      1 => 1777399151,
+      1 => 1777406186,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_69f0f586b0f9c9_82582949 (Smarty_Internal_Template $_smarty_tpl) {
+function content_69f1121032aa70_16520823 (Smarty_Internal_Template $_smarty_tpl) {
 ?><section class="mb-4">
     <p class="page-title mb-1"><?php echo htmlspecialchars((string)(($tmp = $_smarty_tpl->tpl_vars['vue']->value['titre'] ?? null)===null||$tmp==='' ? 'Recherche de sites' ?? null : $tmp), ENT_QUOTES, 'ISO-8859-1', true);?>
 </p>
@@ -127,5 +127,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </div>
         </div>
     <?php }?>
-</div><?php }
+</div>
+<?php }
 }
